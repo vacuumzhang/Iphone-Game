@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A45FA8C81A1EC31400F17043 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A45FA8C71A1EC31400F17043 /* main.m */; };
+		A45FA8CB1A1EC31400F17043 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A45FA8CA1A1EC31400F17043 /* AppDelegate.m */; };
+		A45FA8CE1A1EC31400F17043 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A45FA8CD1A1EC31400F17043 /* GameScene.m */; };
+		A45FA8D01A1EC31400F17043 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A45FA8CF1A1EC31400F17043 /* GameScene.sks */; };
+		A45FA8D31A1EC31400F17043 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45FA8D21A1EC31400F17043 /* GameViewController.m */; };
+		A45FA8D61A1EC31400F17043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45FA8D41A1EC31400F17043 /* Main.storyboard */; };
+		A45FA8D81A1EC31400F17043 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A45FA8D71A1EC31400F17043 /* Images.xcassets */; };
+		A45FA8DB1A1EC31400F17043 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45FA8D91A1EC31400F17043 /* LaunchScreen.xib */; };
+		A45FA8E71A1EC31400F17043 /* Hop_ChampTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A45FA8E61A1EC31400F17043 /* Hop_ChampTests.m */; };
+		A45FA8F21A1EDAFF00F17043 /* MLHero.m in Sources */ = {isa = PBXBuildFile; fileRef = A45FA8F11A1EDAFF00F17043 /* MLHero.m */; };
+		A45FA8F51A1EEF5D00F17043 /* MLWorldGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A45FA8F41A1EEF5D00F17043 /* MLWorldGenerator.m */; };
+		A463D9D01A1F36330067A28D /* MLPointsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A463D9CF1A1F36330067A28D /* MLPointsLabel.m */; };
+		A4FFBE0A1A2273D600778FCB /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FFBE091A2273D600778FCB /* GameData.m */; };
+		F4CE25631A268720004EBEFE /* onGameOver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE25611A268720004EBEFE /* onGameOver.mp3 */; };
+		F4CE25641A268720004EBEFE /* onJump.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4CE25621A268720004EBEFE /* onJump.wav */; };
+		F4CE25661A268747004EBEFE /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = F4CE25651A268747004EBEFE /* ground.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A45FA8E11A1EC31400F17043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A45FA8BA1A1EC31400F17043 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A45FA8C11A1EC31400F17043;
+			remoteInfo = "Hop Champ";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A45FA8C21A1EC31400F17043 /* Hop Champ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hop Champ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A45FA8C61A1EC31400F17043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A45FA8C71A1EC31400F17043 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A45FA8C91A1EC31400F17043 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A45FA8CA1A1EC31400F17043 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A45FA8CC1A1EC31400F17043 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		A45FA8CD1A1EC31400F17043 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		A45FA8CF1A1EC31400F17043 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		A45FA8D11A1EC31400F17043 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		A45FA8D21A1EC31400F17043 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		A45FA8D51A1EC31400F17043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A45FA8D71A1EC31400F17043 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A45FA8DA1A1EC31400F17043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A45FA8E01A1EC31400F17043 /* Hop ChampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hop ChampTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A45FA8E51A1EC31400F17043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A45FA8E61A1EC31400F17043 /* Hop_ChampTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hop_ChampTests.m; sourceTree = "<group>"; };
+		A45FA8F01A1EDAFF00F17043 /* MLHero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHero.h; sourceTree = "<group>"; };
+		A45FA8F11A1EDAFF00F17043 /* MLHero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHero.m; sourceTree = "<group>"; };
+		A45FA8F31A1EEF5D00F17043 /* MLWorldGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLWorldGenerator.h; sourceTree = "<group>"; };
+		A45FA8F41A1EEF5D00F17043 /* MLWorldGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLWorldGenerator.m; sourceTree = "<group>"; };
+		A463D9CE1A1F36330067A28D /* MLPointsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPointsLabel.h; sourceTree = "<group>"; };
+		A463D9CF1A1F36330067A28D /* MLPointsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPointsLabel.m; sourceTree = "<group>"; };
+		A4FFBE081A2273D600778FCB /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameData.h; sourceTree = "<group>"; };
+		A4FFBE091A2273D600778FCB /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameData.m; sourceTree = "<group>"; };
+		F4CE25611A268720004EBEFE /* onGameOver.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = onGameOver.mp3; sourceTree = "<group>"; };
+		F4CE25621A268720004EBEFE /* onJump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = onJump.wav; sourceTree = "<group>"; };
+		F4CE25651A268747004EBEFE /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A45FA8BF1A1EC31400F17043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A45FA8DD1A1EC31400F17043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A45FA8B91A1EC31400F17043 = {
+			isa = PBXGroup;
+			children = (
+				A45FA8C41A1EC31400F17043 /* Hop Champ */,
+				A45FA8E31A1EC31400F17043 /* Hop ChampTests */,
+				A45FA8C31A1EC31400F17043 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A45FA8C31A1EC31400F17043 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A45FA8C21A1EC31400F17043 /* Hop Champ.app */,
+				A45FA8E01A1EC31400F17043 /* Hop ChampTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A45FA8C41A1EC31400F17043 /* Hop Champ */ = {
+			isa = PBXGroup;
+			children = (
+				A45FA8C91A1EC31400F17043 /* AppDelegate.h */,
+				A45FA8CA1A1EC31400F17043 /* AppDelegate.m */,
+				A45FA8CC1A1EC31400F17043 /* GameScene.h */,
+				A45FA8CD1A1EC31400F17043 /* GameScene.m */,
+				A4FFBE081A2273D600778FCB /* GameData.h */,
+				A4FFBE091A2273D600778FCB /* GameData.m */,
+				A463D9CE1A1F36330067A28D /* MLPointsLabel.h */,
+				A463D9CF1A1F36330067A28D /* MLPointsLabel.m */,
+				A45FA8F31A1EEF5D00F17043 /* MLWorldGenerator.h */,
+				A45FA8F41A1EEF5D00F17043 /* MLWorldGenerator.m */,
+				A45FA8F01A1EDAFF00F17043 /* MLHero.h */,
+				A45FA8F11A1EDAFF00F17043 /* MLHero.m */,
+				A45FA8CF1A1EC31400F17043 /* GameScene.sks */,
+				A45FA8D11A1EC31400F17043 /* GameViewController.h */,
+				A45FA8D21A1EC31400F17043 /* GameViewController.m */,
+				A45FA8D41A1EC31400F17043 /* Main.storyboard */,
+				F4CE25611A268720004EBEFE /* onGameOver.mp3 */,
+				F4CE25621A268720004EBEFE /* onJump.wav */,
+				F4CE25651A268747004EBEFE /* ground.png */,
+				A45FA8D71A1EC31400F17043 /* Images.xcassets */,
+				A45FA8D91A1EC31400F17043 /* LaunchScreen.xib */,
+				A45FA8C51A1EC31400F17043 /* Supporting Files */,
+			);
+			path = "Hop Champ";
+			sourceTree = "<group>";
+		};
+		A45FA8C51A1EC31400F17043 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A45FA8C61A1EC31400F17043 /* Info.plist */,
+				A45FA8C71A1EC31400F17043 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A45FA8E31A1EC31400F17043 /* Hop ChampTests */ = {
+			isa = PBXGroup;
+			children = (
+				A45FA8E61A1EC31400F17043 /* Hop_ChampTests.m */,
+				A45FA8E41A1EC31400F17043 /* Supporting Files */,
+			);
+			path = "Hop ChampTests";
+			sourceTree = "<group>";
+		};
+		A45FA8E41A1EC31400F17043 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A45FA8E51A1EC31400F17043 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A45FA8C11A1EC31400F17043 /* Hop Champ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A45FA8EA1A1EC31400F17043 /* Build configuration list for PBXNativeTarget "Hop Champ" */;
+			buildPhases = (
+				A45FA8BE1A1EC31400F17043 /* Sources */,
+				A45FA8BF1A1EC31400F17043 /* Frameworks */,
+				A45FA8C01A1EC31400F17043 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hop Champ";
+			productName = "Hop Champ";
+			productReference = A45FA8C21A1EC31400F17043 /* Hop Champ.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A45FA8DF1A1EC31400F17043 /* Hop ChampTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A45FA8ED1A1EC31400F17043 /* Build configuration list for PBXNativeTarget "Hop ChampTests" */;
+			buildPhases = (
+				A45FA8DC1A1EC31400F17043 /* Sources */,
+				A45FA8DD1A1EC31400F17043 /* Frameworks */,
+				A45FA8DE1A1EC31400F17043 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A45FA8E21A1EC31400F17043 /* PBXTargetDependency */,
+			);
+			name = "Hop ChampTests";
+			productName = "Hop ChampTests";
+			productReference = A45FA8E01A1EC31400F17043 /* Hop ChampTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A45FA8BA1A1EC31400F17043 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Knation;
+				TargetAttributes = {
+					A45FA8C11A1EC31400F17043 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					A45FA8DF1A1EC31400F17043 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = A45FA8C11A1EC31400F17043;
+					};
+				};
+			};
+			buildConfigurationList = A45FA8BD1A1EC31400F17043 /* Build configuration list for PBXProject "Hop Champ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A45FA8B91A1EC31400F17043;
+			productRefGroup = A45FA8C31A1EC31400F17043 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A45FA8C11A1EC31400F17043 /* Hop Champ */,
+				A45FA8DF1A1EC31400F17043 /* Hop ChampTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A45FA8C01A1EC31400F17043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A45FA8DB1A1EC31400F17043 /* LaunchScreen.xib in Resources */,
+				A45FA8D81A1EC31400F17043 /* Images.xcassets in Resources */,
+				A45FA8D01A1EC31400F17043 /* GameScene.sks in Resources */,
+				F4CE25631A268720004EBEFE /* onGameOver.mp3 in Resources */,
+				F4CE25661A268747004EBEFE /* ground.png in Resources */,
+				A45FA8D61A1EC31400F17043 /* Main.storyboard in Resources */,
+				F4CE25641A268720004EBEFE /* onJump.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A45FA8DE1A1EC31400F17043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A45FA8BE1A1EC31400F17043 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A45FA8D31A1EC31400F17043 /* GameViewController.m in Sources */,
+				A4FFBE0A1A2273D600778FCB /* GameData.m in Sources */,
+				A45FA8CB1A1EC31400F17043 /* AppDelegate.m in Sources */,
+				A45FA8CE1A1EC31400F17043 /* GameScene.m in Sources */,
+				A463D9D01A1F36330067A28D /* MLPointsLabel.m in Sources */,
+				A45FA8F21A1EDAFF00F17043 /* MLHero.m in Sources */,
+				A45FA8C81A1EC31400F17043 /* main.m in Sources */,
+				A45FA8F51A1EEF5D00F17043 /* MLWorldGenerator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A45FA8DC1A1EC31400F17043 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A45FA8E71A1EC31400F17043 /* Hop_ChampTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A45FA8E21A1EC31400F17043 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A45FA8C11A1EC31400F17043 /* Hop Champ */;
+			targetProxy = A45FA8E11A1EC31400F17043 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A45FA8D41A1EC31400F17043 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A45FA8D51A1EC31400F17043 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A45FA8D91A1EC31400F17043 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A45FA8DA1A1EC31400F17043 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A45FA8E81A1EC31400F17043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A45FA8E91A1EC31400F17043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A45FA8EB1A1EC31400F17043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Hop Champ/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A45FA8EC1A1EC31400F17043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Hop Champ/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A45FA8EE1A1EC31400F17043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Hop ChampTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hop Champ.app/Hop Champ";
+			};
+			name = Debug;
+		};
+		A45FA8EF1A1EC31400F17043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Hop ChampTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hop Champ.app/Hop Champ";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A45FA8BD1A1EC31400F17043 /* Build configuration list for PBXProject "Hop Champ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A45FA8E81A1EC31400F17043 /* Debug */,
+				A45FA8E91A1EC31400F17043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A45FA8EA1A1EC31400F17043 /* Build configuration list for PBXNativeTarget "Hop Champ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A45FA8EB1A1EC31400F17043 /* Debug */,
+				A45FA8EC1A1EC31400F17043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A45FA8ED1A1EC31400F17043 /* Build configuration list for PBXNativeTarget "Hop ChampTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A45FA8EE1A1EC31400F17043 /* Debug */,
+				A45FA8EF1A1EC31400F17043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A45FA8BA1A1EC31400F17043 /* Project object */;
+}

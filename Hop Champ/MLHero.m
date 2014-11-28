@@ -7,8 +7,9 @@
 //
 
 #import "MLHero.h"
+//#import "GameScene.h"
 @interface MLHero()
-@property BOOL isJumping;//bugged can take away $$
+@property BOOL isJumping;
 @end
 @implementation MLHero
 
@@ -21,11 +22,11 @@ static const uint32_t groundCategory = 0x1 << 2;
     MLHero *hero = [MLHero spriteNodeWithColor:[UIColor blackColor] size:CGSizeMake(20, 20)];
     
     SKSpriteNode *leftEye = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size:CGSizeMake(5, 5)];
-    leftEye.position = CGPointMake(-3, 8);
+    leftEye.position = CGPointMake(-2.5, 6.5);
     [hero addChild:leftEye];
     
     SKSpriteNode *rightEye = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size:CGSizeMake(5, 5)];
-    rightEye.position = CGPointMake(11, 8);
+    rightEye.position = CGPointMake(7, 6.5);
     [hero addChild:rightEye];
     
     hero.name = @"hero";
@@ -43,26 +44,27 @@ static const uint32_t groundCategory = 0x1 << 2;
 }*/
 -(void)jump
 {
-    if (!self.isJumping) {//$$
+    if (!self.isJumping) {
         [self.physicsBody applyImpulse:CGVectorMake(0, 10)];
-        [self runAction:[SKAction playSoundFileNamed:@"onJump.wav" waitForCompletion:NO]];//$$
-        self.isJumping = YES;//$$
+        [self runAction:[SKAction playSoundFileNamed:@"onJump.wav" waitForCompletion:NO]];
+        self.isJumping = YES;
     }
     
 }
--(void)land//$$
+-(void)land
 {
     self.isJumping = NO;
 }
 -(void)start
 {
-    SKAction *incrementRight = [SKAction moveByX:1.0 y:0 duration:0.004];
+    SKAction *incrementRight = [SKAction moveByX:1.0 y:0 duration:0.006];
     SKAction *moveRight = [SKAction repeatActionForever:incrementRight];
     [self runAction:moveRight];
 }
+
 -(void)stop
 {
-    [self.physicsBody applyImpulse:CGVectorMake(0, 50)];
+    [self.physicsBody applyImpulse:CGVectorMake(0, 5)];
     [self removeAllActions];
 }
 

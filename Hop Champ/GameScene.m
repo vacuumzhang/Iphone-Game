@@ -37,6 +37,7 @@ static NSString *GAME_FONT = @"AmericanTypewriter-Bold";
     self.physicsWorld.contactDelegate = self;
     
     [self createContent];
+    
     }
     return self;
     
@@ -51,11 +52,12 @@ static NSString *GAME_FONT = @"AmericanTypewriter-Bold";
     
     generator = [MLWorldGenerator generatorWithWorld:world];
     [self addChild:generator];
-    [generator generateGround];
+    [generator gameGround];
     [generator populate];
     
     hero = [MLHero hero];
     [world addChild:hero];
+    
     
     [self loadScoreLabel];
     
@@ -149,12 +151,9 @@ static NSString *GAME_FONT = @"AmericanTypewriter-Bold";
 {
     self.isGameOver = YES;
     [hero stop];
-    self.physicsWorld.gravity = CGVectorMake(0,0);
+    self.physicsWorld.gravity = CGVectorMake(0, 0);
     [self runAction:[SKAction playSoundFileNamed:@"onGameOver.mp3" waitForCompletion:NO]];
     
-//    SKScene *endGameScene = [[EndGameScene alloc] initWithSize:self.size];
-//    SKTransition *reveal = [SKTransition fadeWithDuration:0.5];
-//    [self.view presentScene:endGameScene transition:reveal];
     SKLabelNode *gameOverLabel = [SKLabelNode labelNodeWithFontNamed:GAME_FONT];
     gameOverLabel.text = @"Game Over";
     gameOverLabel.position = CGPointMake(0, 60);
@@ -169,6 +168,26 @@ static NSString *GAME_FONT = @"AmericanTypewriter-Bold";
     
     [self updateHighScore];
 }
+/*-(void)fallDie//only for fall die situation
+{
+    self.isGameOver = YES;
+    [hero stop];
+    SKLabelNode *gameOverLabel = [SKLabelNode labelNodeWithFontNamed:GAME_FONT];
+    gameOverLabel.text = @"Game Over";
+    gameOverLabel.position = CGPointMake(0, 60);
+    [self addChild:gameOverLabel];
+    
+    SKLabelNode *tapToResetLabel = [SKLabelNode labelNodeWithFontNamed:GAME_FONT];
+    tapToResetLabel.name = @"tapToResetLabel";
+    tapToResetLabel.text = @"tap to reset";
+    tapToResetLabel.fontSize = 20.0;
+    [self addChild:tapToResetLabel];
+    [self animationWithPulse:tapToResetLabel];
+    
+    [self updateHighScore];
+
+    
+}*/
 -(void)didSimulatePhysics
 {
     [self centerOnNode:hero];
@@ -184,7 +203,7 @@ static NSString *GAME_FONT = @"AmericanTypewriter-Bold";
             MLPointsLabel *pointsLabel = (MLPointsLabel *)[self childNodeWithName:@"pointsLabel"];
             [pointsLabel increment];
         }
-        if (hero.position.y < node.position.y-200){
+        if(hero.position.y<node.position.y-200){//new to game over
             [self gameOver];
         }
     }];
@@ -221,24 +240,25 @@ static NSString *GAME_FONT = @"AmericanTypewriter-Bold";
     world.position = CGPointMake(world.position.x-positionInScene.x, world.position.y-positionInScene.y);
     //world.position.y-positionInScene.y   camera will follow the hero
     
+    
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
-    if(!self.isStarted){
+    if (!self.isStarted)
         [self start];
-    }else if(self.isGameOver){
-        [self clear];
-    }else{
+    
+    else if(self.isGameOver)
+       [self clear];
+    else
         [hero jump];
-    }
     
     
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
-    NSLog(@"hero's (x,y): (%g,%g)",hero.position.x,hero.position.y);
+    
 }
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {
@@ -246,15 +266,12 @@ static NSString *GAME_FONT = @"AmericanTypewriter-Bold";
     if ([contact.bodyA.node.name isEqualToString: @"ground"] || [contact.bodyB.node.name isEqualToString:@"ground"])
     {//$$
         
-        [hero land];
-        NSLog(@"%g", hero.position.x);//$$
-    } else {//$$
-        [hero land];
-        NSLog(@"hero's x posintion %g", hero.position.x);
-//        [self gameOver];
-    }
-    
-    
+        [hero land];//$$
+        NSLog(@"OVER");
+    }else
+          [hero land];
+        
+   
 }
 
 // ** animation section **//

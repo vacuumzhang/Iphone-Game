@@ -12,6 +12,5 @@
 +(id)generatorWithWorld:(SKNode *)world;
 -(void)populate;
 -(void)generate;
--(void)generateGround;
-
+-(void)gameGround;
 @end

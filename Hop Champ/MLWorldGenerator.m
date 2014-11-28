@@ -11,8 +11,6 @@
 @interface MLWorldGenerator()
 @property double currentGroundX;
 @property double currentObstacleX;
-@property double currentObstacleY;
-@property double currentFireX;
 @property SKNode *world;
 @end
 
@@ -24,10 +22,8 @@ static const uint32_t groundCategory = 0x1 << 2;
 +(id)generatorWithWorld:(SKNode *)world
 {
     MLWorldGenerator *generator =[MLWorldGenerator node];
-    generator.currentGroundX = 0;
+    generator.currentGroundX =0;
     generator.currentObstacleX =400;
-    generator.currentObstacleY = 0;
-    generator.currentFireX = 0;
     generator.world = world;
     
     return generator;
@@ -35,9 +31,9 @@ static const uint32_t groundCategory = 0x1 << 2;
 -(void)populate
 {
     for(int i=0;i<3;i++)
-        [self generate];
+  [self generate];
 }
--(void)generateGround
+-(void)gameGround
 {
     SKSpriteNode *ground = [SKSpriteNode spriteNodeWithImageNamed:@"ground"];
     //spriteNodeWithColor:[UIColor greenColor] size:CGSizeMake(self.scene.frame.size.width, 100)
@@ -47,29 +43,26 @@ static const uint32_t groundCategory = 0x1 << 2;
     ground.physicsBody.categoryBitMask =groundCategory;
     ground.physicsBody.dynamic = NO;
     [self.world addChild:ground];
-    
     self.currentGroundX += ground.frame.size.width;
-    
-    
 }
-
--(void)generate{
+-(void)generate
+{
     
-    SKSpriteNode *obstacle = [SKSpriteNode spriteNodeWithColor:[self getRandomColor] size:CGSizeMake(100, 10)];
+    
+    
+    
+    SKSpriteNode *obstacle = [SKSpriteNode spriteNodeWithColor:[self getRandomColor] size:CGSizeMake(70, 10)];
     
     obstacle.name = @"obstacle";
-    //self.currentObstacleY += arc4random()%20;
-    obstacle.position = CGPointMake(self.currentObstacleX, self.currentObstacleY );// + obstacle.frame.size.height/2
+    obstacle.position = CGPointMake(self.currentObstacleX, arc4random()%80);// + obstacle.frame.size.height/2
     obstacle.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:obstacle.size];
     obstacle.physicsBody.categoryBitMask = obstacleCategory;
     obstacle.physicsBody.dynamic = NO;
     [self.world addChild:obstacle];
-    self.currentObstacleY += arc4random()%20;
     
-    self.currentObstacleX += 250;
+    self.currentObstacleX += 150;
     
 }
-
 -(UIColor *)getRandomColor
 {
     int rand = arc4random() %6;
@@ -99,6 +92,4 @@ static const uint32_t groundCategory = 0x1 << 2;
     }
     return color;
 }
-
-
 @end

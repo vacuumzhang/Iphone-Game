@@ -15,5 +15,5 @@
 -(void)land;
 -(void)start;
 -(void)stop;
-
+//-(void)heroDie;
 @end
